@@ -12,7 +12,7 @@ const Register = () => {
   const handleRegister = async (e) => {
     e.preventDefault();
     try {
-      await api.post("API/auth/register", { username, password });
+      await api.post("/auth/register", { username, password });
       setSuccess("Usuario registrado exitosamente. ¡Inicia sesión!");
       setError("");
       setTimeout(() => navigate("/login"), 2000);
